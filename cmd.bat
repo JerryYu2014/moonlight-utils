@@ -16,3 +16,7 @@ npm i chai -D
 REM Code coverage
 npm i istanbul -D
 npm i coveralls -D
+
+npm install moonlight-utils --registry=https://registry.npm.taobao.org
+
+npm i moonlight-utils --registry=https://registry.npmjs.org/

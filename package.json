@@ -1,8 +1,8 @@
 {
   "name": "moonlight-utils",
-  "version": "1.0.0",
-  "description": "moonlight-utils is a JavaScript utility library",
-  "main": "./src/index.js",
+  "version": "1.0.4",
+  "description": "moonlight-utils is a javaScript utility library",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "test": "mocha --reporter spec",
