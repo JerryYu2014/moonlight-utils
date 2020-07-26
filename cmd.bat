@@ -9,6 +9,8 @@ npm i typescript -D
 
 .\node_modules\.bin\tsc --init
 
+npm install --save-dev webpack
+
 REM Test
 npm i mocha -D
 npm i chai -D
