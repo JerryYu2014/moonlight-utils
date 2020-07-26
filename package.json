@@ -1,13 +1,12 @@
 {
   "name": "moonlight-utils",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "moonlight-utils is a javaScript utility library",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "wpbuild": "webpack",
     "test": "npm run build && mocha --reporter spec",
-    "test2": "mocha -r ./node_modules/ts-node/register spec/**/*.ts",
     "cover": "istanbul cover node_modules/mocha/bin/_mocha test/*.js - - -R spec"
   },
   "repository": {

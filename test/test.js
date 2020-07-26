@@ -5,10 +5,7 @@ const expect = require('chai').expect;
 
 const utils = require('../dist/index');
 
-// const { utils } = require('../dist/index');
-// let moonlightUtils = new MoonlightUtils();
-
-// console.log(utils.add(1, 2));
+const { Pinyin, Validate, ToTree } = require('../dist/index');
 
 describe('moonlight-utils function add test', () => {
   it('should return 101', () => {
@@ -17,13 +14,13 @@ describe('moonlight-utils function add test', () => {
   });
 });
 
-// describe('moonlight-utils function toTree test', () => {
-//   it('should return [{"id":1,"pid":0,"name":"abc","children":[{"id":3,"pid":1,"name":"hij"}]},{"id":2,"pid":0,"name":"efg"}]', () => {
-//     const result = utils.toTree([{ id: 1, pid: 0, name: 'abc' }, { id: 2, pid: 0, name: 'efg' }, { id: 3, pid: 1, name: 'hij' }], 'id', 'pid');
-//     expect(JSON.stringify(result))
-//       .to.equal(JSON.stringify([{ id: 1, pid: 0, name: 'abc', children: [{ id: 3, pid: 1, name: 'hij' }] }, { id: 2, pid: 0, name: 'efg' }]));
-//   });
-// });
+describe('moonlight-utils function toTree test', () => {
+  it('should return [{"id":1,"pid":0,"name":"abc","children":[{"id":3,"pid":1,"name":"hij"}]},{"id":2,"pid":0,"name":"efg"}]', () => {
+    const result = new ToTree().toTree([{ id: 1, pid: 0, name: 'abc' }, { id: 2, pid: 0, name: 'efg' }, { id: 3, pid: 1, name: 'hij' }], 'id', 'pid');
+    expect(JSON.stringify(result))
+      .to.equal(JSON.stringify([{ id: 1, pid: 0, name: 'abc', children: [{ id: 3, pid: 1, name: 'hij' }] }, { id: 2, pid: 0, name: 'efg' }]));
+  });
+});
 
 // describe('moonlight-utils function add test', () => {
 //   it('should return 2', () => {
