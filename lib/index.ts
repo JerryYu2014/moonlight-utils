@@ -48,3 +48,7 @@
 export * from './pinyin';
 export * from './totree';
 export * from './validate';
+export * from './clipboard';
+// export * from './v-dialog-drag';
+export * from './typeOfObject';
+export * from './common';

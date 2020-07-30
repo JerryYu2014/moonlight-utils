@@ -1,15 +1,19 @@
 
 REM npm 模块初始化及发布
 npm init
-npm adduser
-npm whoami
-npm publish
+npm adduser --registry=https://registry.npmjs.org/
+npm whoami --registry=https://registry.npmjs.org/
+npm publish --registry=https://registry.npmjs.org/
 
 npm i typescript -D
 
 .\node_modules\.bin\tsc --init
 
 npm install --save-dev webpack
+npm i webpack -D
+
+npm install clipboard --save
+npm i clipboard
 
 REM Test
 npm i mocha -D

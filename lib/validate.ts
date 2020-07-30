@@ -91,9 +91,9 @@
 // }
 
 /**
-   * @param {string} path
-   * @returns {Boolean}
-   */
+ * @param {string} path
+ * @returns {Boolean}
+ */
 export function isExternal(path: any): boolean {
   return /^(https?:|mailto:|tel:)/.test(path)
 }

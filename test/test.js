@@ -20,13 +20,6 @@ describe('moonlight-utils function toTree test', () => {
   });
 });
 
-// describe('moonlight-utils function add test', () => {
-//   it('should return 2', () => {
-//     const result = utils.add(1, 1);
-//     expect(result).to.equal(2);
-//   });
-// });
-
 describe('moonlight-utils function isString test', () => {
   it('should return true', () => {
     const result = utils.isString(123);
@@ -45,5 +38,22 @@ describe('moonlight-utils function makePy test', () => {
   it('should return mayun', () => {
     const result = utils.makePy('马云');
     expect(result).to.equal('mayun');
+  });
+});
+
+describe('moonlight-utils function typeOfObject test', () => {
+  it('should return Function', () => {
+    // const result = utils.typeOfObject([]);
+    // expect(result).to.equal('Array');
+
+    const result = utils.typeOfObject(() => { });
+    expect(result).to.equal('Function');
+  });
+});
+
+describe('moonlight-utils function globalReplace test', () => {
+  it('should return AbcAhkAcc', () => {
+    const result = utils.globalReplace('abcahkacc', 'a', 'A');
+    expect(result).to.equal('AbcAhkAcc');
   });
 });
