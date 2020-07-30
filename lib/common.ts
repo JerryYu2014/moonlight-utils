@@ -139,9 +139,9 @@ export function cleanArray(actual: any) {
 
 /**
  * @param {Object} json
- * @returns {Array}
+ * @returns {string}
  */
-export function param(json: any) {
+export function param(json: any): string {
   if (!json) return ''
   return cleanArray(
     Object.keys(json).map(key => {
