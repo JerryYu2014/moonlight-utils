@@ -291,7 +291,7 @@ export function debounce(func: Function, wait: number, immediate: boolean): any 
  * @param event 
  * @param time 
  */
-export function throttle(event: any, time: any) {
+export function throttle(event: Function, time: number) {
   let pre = 0;
   let timer: any = null;
   return function (...args: any) {
