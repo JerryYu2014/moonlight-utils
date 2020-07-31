@@ -238,6 +238,12 @@ export function getTime(type: string) {
 }
 
 /**
+ * 防抖（debounce）：不管事件触发频率多高，
+ * 一定在事件触发n秒后才执行，
+ * 如果你在一个事件触发的 n 秒内又触发了这个事件，
+ * 就以新的事件的时间为准，n秒后才执行，
+ * 总之，触发完事件 n 秒内不再触发事件，n秒后再执行。
+ * 
  * @param {Function} func
  * @param {number} wait
  * @param {boolean} immediate
@@ -276,6 +282,31 @@ export function debounce(func: Function, wait: number, immediate: boolean): any 
     }
 
     return result
+  }
+}
+
+/**
+ * 节流（throttle）:不管事件触发频率多高，只在单位时间内执行一次。
+ * 
+ * @param event 
+ * @param time 
+ */
+export function throttle(event: any, time: any) {
+  let pre = 0;
+  let timer: any = null;
+  return function (...args: any) {
+    if (Date.now() - pre > time) {
+      clearTimeout(timer);
+      timer = null;
+      pre = Date.now();
+      // event.apply(this, args);
+      event.apply(throttle, args);
+    } else if (!timer) {
+      timer = setTimeout(() => {
+        // event.apply(this, args);
+        event.apply(throttle, args);
+      }, time);
+    }
   }
 }
 
