@@ -57,3 +57,14 @@ describe('moonlight-utils function globalReplace test', () => {
     expect(result).to.equal('AbcAhkAcc');
   });
 });
+
+describe('moonlight-utils function currying test', () => {
+  it('should return 3', () => {
+    function add(v1, v2) {
+      return v1 + v2
+    }
+
+    const result = utils.currying(add, 1)(2);
+    expect(result).to.equal(3);
+  });
+});
