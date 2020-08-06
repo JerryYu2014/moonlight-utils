@@ -108,6 +108,23 @@ export function getQueryObject(url: string) {
 }
 
 /**
+ * 通过键名获取 url 中 query string 的值
+ * 
+ * @param key 键名
+ */
+export function getQueryValueByKey(key: string) {
+  const arr = window.location.hash.split("?");
+  if (arr.length > 1) {
+    const reg = new RegExp('(^|&)' + key + '=([^&]*)(&|$)', 'i');
+    const r = arr[1].substr(0).match(reg);
+    if (r != null) {
+      return decodeURI(r[2]);
+    }
+  }
+  return null;
+}
+
+/**
  * @param {string} input value
  * @returns {number} output value
  */
