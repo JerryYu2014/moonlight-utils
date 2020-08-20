@@ -52,3 +52,4 @@ export * from './clipboard';
 // export * from './v-dialog-drag';
 export * from './typeOfObject';
 export * from './common';
+export * from './EsEnum';

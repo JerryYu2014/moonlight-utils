@@ -64,9 +64,9 @@
     // "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
   },
   "include": [
-    "./lib/*" // 要用ts-loader解析的文件路径
+    "lib/**/*" // 要用ts-loader解析的文件路径
   ],
   "exclude": [
-    "./node_modules" // 不用ts-loader解析的文件路径
+    "node_modules" // 不用ts-loader解析的文件路径
   ]
 }
