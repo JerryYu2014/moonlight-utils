@@ -53,3 +53,4 @@ export * from './clipboard';
 export * from './typeOfObject';
 export * from './common';
 export * from './EsEnum';
+export * from './deepclone';
