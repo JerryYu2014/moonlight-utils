@@ -52,5 +52,10 @@ export * from './clipboard';
 // export * from './v-dialog-drag';
 export * from './typeOfObject';
 export * from './common';
-export * from './EsEnum';
+export * from './analog-enumeration';
 export * from './deepclone';
+
+export * from './datetime-handler';
+export * from './querystring-handler';
+export * from './debounce';
+export * from './throttle';
